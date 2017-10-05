@@ -1,5 +1,11 @@
+'use strict';
+
 const stripAnsi = require('strip-ansi');
-const {replaceVars, getDateString, getTimeString} = require('./utils');
+const utils = require('./utils');
+
+const replaceVars = utils.replaceVars;
+const getDateString = utils.getDateString;
+const getTimeString = utils.getTimeString;
 
 module.exports = function (report, appDirectory, options) {
     // Generate a single XML file for all jest tests
@@ -43,7 +49,7 @@ module.exports = function (report, appDirectory, options) {
             }]
         };
 
-        testSuiteResults = {
+        let testSuiteResults = {
             'results': []
         }
 

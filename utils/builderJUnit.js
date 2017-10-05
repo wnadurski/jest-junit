@@ -1,8 +1,9 @@
 'use strict';
 
 const stripAnsi = require('strip-ansi');
-const {replaceVars} = require('./utils');
+const utils = require('./utils');
 
+const replaceVars = utils.replaceVars;
 
 module.exports = function (report, appDirectory, options) {
   // Generate a single XML file for all jest tests
