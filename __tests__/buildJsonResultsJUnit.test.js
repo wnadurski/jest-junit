@@ -1,6 +1,6 @@
 'use strict';
 
-const buildJsonResults = require('../utils/buildJsonResults');
+const buildJsonResults = require('../utils/builderJUnit');
 const constants = require('../constants/index');
 
 describe('buildJsonResults', () => {

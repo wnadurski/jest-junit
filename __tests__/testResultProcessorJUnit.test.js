@@ -35,7 +35,7 @@ describe('jest-junit', () => {
     expect(fs.writeFileSync.mock.calls.length).toBe(1);
 
     // Ensure file would have been generated
-    expect(fs.writeFileSync.mock.calls[0][0]).toBe(path.resolve('junit.xml'));
+    expect(fs.writeFileSync.mock.calls[0][0]).toBe(path.resolve('jest-tests-report.xml'));
 
     // Ensure generated file is valid xml
     const xmlDoc = libxmljs.parseXml(fs.writeFileSync.mock.calls[0][1]);

@@ -13,11 +13,12 @@ module.exports = {
   },
   DEFAULT_OPTIONS: {
     suiteName: 'jest tests',
-    output: path.join(process.cwd(), './junit.xml'),
+    output: path.join(process.cwd(), './jest-tests-report.xml'),
     classNameTemplate: '{classname} {title}',
     titleTemplate: '{classname} {title}',
     ancestorSeparator: ' ',
     usePathForSuiteName: 'false',
+    reportStyle: "junit"
   },
   CLASSNAME_VAR: '{classname}',
   TITLE_VAR: '{title}',
